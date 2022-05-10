@@ -13,11 +13,26 @@
     <h1>
       {{name}}
       <span v-if="chancePercent > 0">👌</span>
+      <span v-if-else="chancePercent < 0">✋</span>
       <span v-else>👇</span>
 
+      <!--
       <span v-show="chancePercent > 0">👌</span>
       <span v-show="chancePercent < 0">👌</span>
       <span v-show="chancePercent == 0">👌</span>
+      -->
+
+      <ul>
+        <li v-for="(price, i) in prices" v-bind:key="price">
+          {{i}} - {{price}}
+        </li>
+      </ul>
+
+      <ul>
+        <li v-for="(price, i) in pricesWithDays" v-bind:key="price.day">
+          {{i}} - {{price.day}} - {{price.value}}
+        </li>
+      </ul>
     </h1>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
