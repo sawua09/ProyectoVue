@@ -1,0 +1,32 @@
+<div id="app">
+  <h1>{{ title }}</h1>
+  <p>{{ 1 + 1 + 1}}</p>
+  <p>{{ true || false }} </p>
+  <p>{{ true ? true : false}} </p>
+  <p>{{ 'string'.toUpperCase() }} </p>
+  <p>{{ JSON.stringify({name: 'Victor'}) }} </p>
+  <p> </p>
+</div>
+
+/*const title = "Hola!"
+
+const h1 = document.getElementById('h1')
+
+h1.innerText = title
+
+title = "Adios"
+  
+
+h1.innerText = title
+
+*/
+
+const app = new Vue({
+  el: '#app',
+  
+  data(){
+    return {
+      title: 'Hola vue'
+  }
+  }
+})
