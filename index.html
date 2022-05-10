@@ -10,7 +10,15 @@
 <body>
   <div id="app">
     <img v-bind:src="img" v-bind:alt="name">
-    <h1>{{name}}</h1>
+    <h1>
+      {{name}}
+      <span v-if="chancePercent > 0">👌</span>
+      <span v-else>👇</span>
+
+      <span v-show="chancePercent > 0">👌</span>
+      <span v-show="chancePercent < 0">👌</span>
+      <span v-show="chancePercent == 0">👌</span>
+    </h1>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="app.js"></script>
