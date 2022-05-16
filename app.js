@@ -8,6 +8,14 @@ Vue.component("coinDetail",{
     }
   },
 
+  created () {
+    console.log("created son")
+  },
+
+  mounted () {
+    console.log("mounted son")
+  },
+
   methods:{
     toggleShowPrices (){
       this.showPrices = !this.showPrices
@@ -87,6 +95,13 @@ new Vue ({
       color: 'f4f4f4', 
       //prices: [8400, 7900, 8200, 9000, 9400, 10000, 10200],
     }
+  },
+  created () {
+    console.log("created")
+  },
+
+  mounted () {
+    console.log("mounted")
   },
 
   methods: {
