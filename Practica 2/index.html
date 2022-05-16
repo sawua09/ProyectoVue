@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Curso Basico de Vue.js | Platzi</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div id="app">
+            <button v-on:click="toggleModal">Show Modal</button>
+            <modal
+                v-bind:show-Modal="showModal"
+                v-on:close="toggleModal">
+                <template v-slot:body>
+                    <p>Este es el contenido del modal con slots</p>
+                    <span>una excelente practica 😁</span>
+                </template>
+            </modal>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
